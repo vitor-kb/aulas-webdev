@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="contas">
+<head>
+    <meta charset="UTF-8">
+    <title>Somas</title>
+</head>
+<body>
+    <div ng-controller="OpController">
+        <h1>O que vamos fazer?</h1>
+        <h2>{{tarefa}}</h2>
+        <p>Soma: {{termo1}} + {{termo2}} = {{termo1 + termo2}}</p>
+        <p>Subtração: {{termo1}} - {{termo2}} = {{termo1 - termo2}}</p>
+        <p>Multiplicação: {{termo1}} * {{termo2}} = {{termo1 * termo2}}</p>
+        <p>Divisão: {{termo1}} / {{termo2}} = {{termo1 / termo2}}</p>
+    </div>
+    <script src="../ex_2/js/angular.js"></script>
+    <script src="../ex_2/js/index.js"></script>
+</body>
+</html>

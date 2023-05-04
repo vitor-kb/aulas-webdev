@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="paisesApp">
+
+<head>
+    <style>
+        table,
+        id {
+            border: 1px solid grey;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Países</title>
+</head>
+
+<body>
+    <div ng-controller="PaisesController">
+        <table>
+            <tr ng-repeat="x in capitais">
+                <td ng-if="$odd" style="background-color: lightblue;">{{x.capital}}</td>
+                <td ng-if="$even">{{x.capital}}</td>
+                <td ng-if="$odd" style="background-color: lightblue;">{{x.pais}}</td>
+                <td ng-if="$even">{{x.pais}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="../ex_4/js/angular.js"></script>
+    <script src="../ex_4/js/controller_paises.js"></script>
+</body>
+
+</html>

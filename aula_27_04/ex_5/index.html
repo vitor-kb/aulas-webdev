@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="carrinhoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seu Carrinho de Compras</title>
+</head>
+
+<body ng-controller="CarrinhoController">
+    <h1>Seu Pedido</h1>
+    <div ng-repeat="item in items">
+        <p>{{item.nome}}</p>
+        <input ng-model="item.quantidade">
+        <!-- currency muda a apresentação para formato monetário -->
+        <p>{{item.preco | currency}}</p>
+        <p>{{item.preco * item.quantidade | currency}}</p>
+        <!-- O indice está associado a cada elemento -->
+        <button ng-click="remove($index)">Remover</button>
+        <hr>
+    </div>
+    <script src="../ex_5/js/angular.js"></script>
+    <script src="../ex_5/js/controller_carrinho.js"></script>
+</body>
+
+</html>
